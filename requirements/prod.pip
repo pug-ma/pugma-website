@@ -1,6 +1,6 @@
 django==1.5.1
 pillow==2.0.0
 south==0.7.6
-django-wysiwyg-redactor==0.3.1
+django-wysiwyg-redactor==0.3.2
 django-tagging==0.3.1
 django-autoslug==1.6.1s

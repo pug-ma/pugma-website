@@ -1,22 +1,17 @@
 from django.http import Http404
 from django.views.generic import DetailView, ListView
 
+from tagging.models import Tag
+from tagging.models import TaggedItem
+
 from .models import Entry
 
 
 class TaggedEntryListView(ListView):
-    """List all ``Entry``s that have the given ``Tag``(s). Mulitple ``Tag``s
-    may be separated by a plus; For example: /blog/tags/foo+bar would retrieve
-    all ``Entry``s tagged with both "foo" and "bar".
-
-    """
-    allow_empty = True
     model = Entry
 
     def get_queryset(self):
-        tag_list = self.kwargs['tag_slug'].split('+')
-        tags = filter(lambda x: len(x) > 0, tag_list)
-        return Entry.objects.filter(tags__slug__in=tags).distinct()
+        return TaggedItem.objects.get_by_model(Entry, Tag.objects.filter(name__in=[self.kwargs['tag']]))
 
 
 class EntryDetailView(DetailView):
