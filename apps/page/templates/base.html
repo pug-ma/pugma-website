@@ -5,7 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
 
-        <title>{% block title %}PUG-MA | Python User Group do Maranhão{% endblock %}</title>
+        <meta property="og:title" content="{% block title %}PUG-MA | Python User Group{% endblock %}">
+        <meta property="og:url" content="http://pug-ma.com">
+        <meta property="og:image" content="http://pug-ma.com/s/img/pugma-fb.png">
+        <meta property="og:site_name" content="PUG-MA">
+        <meta property="og:description" content="O PUG-MA é o grupo de desenvolvedores Python do estado do Maranhão e tem por objetivo difundir o uso da linguagem em todo o estado.">
+
+        <title>{% block title %}PUG-MA | Python User Group{% endblock %}</title>
 
         <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ STATIC_URL }}css/bootstrap-responsive.min.css" rel="stylesheet">
