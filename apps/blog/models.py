@@ -1,5 +1,6 @@
-from django.conf import settings
 from django.db import models
+from django.conf import settings
+from django.contrib.sites.models import Site
 from django.utils.translation import ugettext_lazy as _
 
 from autoslug import AutoSlugField
@@ -37,4 +38,9 @@ class Entry(models.Model):
             self.slug
         ]
         return ('blog_archive_date_detail', args)
+
+    def get_full_url(self):
+        return ''.join([settings.SITE_PROTOCOL, Site.objects.get_current().domain, self.get_absolute_url()])
+
+
 
