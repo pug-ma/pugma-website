@@ -1,6 +1,9 @@
 body {
     background: url(../img/bg.png);
 }
+a {
+    color: #961B1B;
+}
 .navbar-fixed-top {
     position: static;
 }
