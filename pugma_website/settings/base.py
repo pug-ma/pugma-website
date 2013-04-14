@@ -83,6 +83,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
     'apps.page.context_processors.projects',
     'apps.page.context_processors.latest_entries',
+    'apps.page.context_processors.next_event',
 )
 
 # Middleware 
