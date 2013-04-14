@@ -16,7 +16,6 @@ class Entry(models.Model):
     body = models.TextField(_('body'))
     pub_date = models.DateTimeField(_('publication date'))
     draft = models.BooleanField(_('draft'))
-    is_event = models.BooleanField(_('is event'))
     tags = TagField()
     slug = AutoSlugField(populate_from='title', unique_with=('pub_date', ))
 
