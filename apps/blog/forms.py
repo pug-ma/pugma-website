@@ -10,6 +10,7 @@ from .models import Entry
 class EntryForm(forms.ModelForm):
 	class Meta:
 		model = Entry
+		exclude = ('author', )
 
 		widgets = {
            'body': RedactorEditor(upload_to='blog/post/'),
