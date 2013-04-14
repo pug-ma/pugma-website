@@ -80,6 +80,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
+    'apps.page.context_processors.projects',
 )
 
 # Middleware 
@@ -108,6 +109,7 @@ INSTALLED_APPS = (
     # Project Apps
     'apps.page',
     'apps.blog',
+    'apps.projects',
     
     # Third-party Apps
     'tagging',

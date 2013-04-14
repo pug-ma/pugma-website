@@ -29,7 +29,7 @@
                     <a href="#"><img class="logo" src="{{ STATIC_URL }}img/pugma.png" alt="Pug-MA"></a>
                 </div>
                 <div class="span6 offset4">
-                    <ul class="row new-users-navigation">
+                    <ul class="row navigation">
                         <li class="span2">
                             <a href="#"><img src="http://placehold.it/150x150/ff9d00/fff&text=Inicie-se" class="img-circle img-polaroid"></a>
                         </li>
@@ -61,22 +61,26 @@
                         <p><b>Local: </b>INESPO</p>
                         <p><b>Data/Hora: </b>11/05/2013 às 14:00</p>
                     </section>
+                    {% if projects %}
                     <section class="default-box">
                         <h3>Projetos</h3>
                         <ul class="media-list">
-                            {% for i in "123" %}
+                            {% for project in projects %}
                             <li class="media">
+                                {% if project.image %}
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="http://placehold.it/64x64">
+                                    <img class="media-object" src="{{ STATIC_URL }}{{ project.image }}">
                                 </a>
+                                {% endif %}
                                 <div class="media-body">
-                                    <h4 class="media-heading">Media heading</h4>
-                                    <p><a href="#">Lole hehehe adgasudhgasud, nice project!</a></p>
+                                    <h4 class="media-heading">{{ project.name }}</h4>
+                                    <p><a href="{{ project.url }}">{{ project.description }}</a></p>
                                 </div>
                             </li>
                             {% endfor %}
                         </ul>
                     </section>
+                    {% endif %}
                     <section class="default-box">
                         <h3>Membros</h3>
                         <div class="people">

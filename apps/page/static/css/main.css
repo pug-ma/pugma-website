@@ -14,8 +14,18 @@ a:hover {
 .site-header .logo {
     margin: 20px;
 }
-.new-users-navigation {
+.navigation {
     list-style: none;
+}
+.navigation li {
+    -webkit-transition: margin-top 0.3s ease-out;
+    -moz-transition: margin-top 0.3s ease-out;
+    -o-transition: margin-top 0.3s ease-out;
+    transition: margin-top 0.3s ease-out;
+    position: relative;
+}
+.navigation li:hover {
+    margin-top: -10px;
 }
 .post {
     -webkit-box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
@@ -56,6 +66,7 @@ a:hover {
 }
 .site-footer {
     background: #1b1b1b;
+    margin-top: 20px;
     padding: 20px 0;
 }
 .site-footer h4 {
