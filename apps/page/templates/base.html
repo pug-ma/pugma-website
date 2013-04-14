@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load flatpages %}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,11 +104,11 @@
                 <div class="row">
                     <section class="span2">
                         <h4>Quem somos</h4>
+                        {% get_flatpages as flatpages %}
                         <ul>
-                            <li><a href="#">Pug-MA</a></li>
-                            <li><a href="#">Pug-MA</a></li>
-                            <li><a href="#">Pug-MA</a></li>
-                            <li><a href="#">Pug-MA</a></li>
+                            {% for page in flatpages %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </section>
                     <section class="span3">
