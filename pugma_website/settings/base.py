@@ -47,8 +47,8 @@ SITE_PROTOCOL = 'http://'
 ROOT_URLCONF = 'pugma_website.urls'
 
 # Internationalization
-TIME_ZONE = 'America/Chicago'
-LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'America/Araguaina'
+LANGUAGE_CODE = 'pt-br'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -84,7 +84,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
     'apps.page.context_processors.projects',
     'apps.page.context_processors.latest_entries',
-    'apps.page.context_processors.next_event',
+    'apps.page.context_processors.schedule',
 )
 
 # Middleware 
@@ -116,7 +116,8 @@ INSTALLED_APPS = (
     'apps.page',
     'apps.blog',
     'apps.projects',
-    
+    'apps.schedule',
+
     # Third-party Apps
     'gunicorn',
     'tagging',

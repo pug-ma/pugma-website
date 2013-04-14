@@ -1,5 +1,7 @@
+from datetime import datetime
 from apps.projects.models import Project
 from apps.blog.models import Entry
+from apps.schedule.models import Event
 
 
 def latest_entries(request):
@@ -8,10 +10,6 @@ def latest_entries(request):
 def projects(request):
     return {'projects': Project.objects.all()}
 
-def next_event(request):
-    event = Entry.objects.filter(is_event=True).order_by('-pub_date')
-    try:
-        event = event[0]
-    except IndexError:
-        event = None
-    return {'next_event': event}
+def schedule(request):
+    events = Event.objects.filter(date__gte=datetime.now).order_by('-date')
+    return {'schedule': events}
