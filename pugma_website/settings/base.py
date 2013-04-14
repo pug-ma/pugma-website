@@ -37,7 +37,7 @@ DATABASES = {
 }
 
 # Site
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ('127.0.0.1', 'pug-ma.com', '198.211.116.142')
 SITE_ID = 1
 SECRET_KEY = 'v1$+lvszttsiowgzn$6uk!$ux3d^ed@c34#l^0c9kl+6pu=9wz'
 WSGI_APPLICATION = 'pugma_website.wsgi.application'
@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'apps.schedule',
 
     # Third-party Apps
+    'gunicorn',
     'tagging',
     'redactor',
     'south'
