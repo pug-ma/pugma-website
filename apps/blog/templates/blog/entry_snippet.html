@@ -2,13 +2,18 @@
 <article class="post clearfix">
     <header>
         <h2><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h2>
-        <p>Publicado por: <b>{{ obj.author.get_full_name }}</b> em <b>{{ obj.pub_date|date:"d/m/Y \à\s h:i" }}</b></p>
+        {% if obj.body %}<p>Publicado por: <b>{{ obj.author.get_full_name }}</b> em <b>{{ obj.pub_date|date:"d/m/Y \à\s h:i" }}</b></p>{% endif %}
     </header>
 
     <div class="body">
+        {% if obj.body %}
         {{ obj.body|safe }}
+        {% else %}
+        {{ obj.content|safe }}
+        {% endif %}
     </div>
 
+    {% if obj.body %}
     <footer>
         {% tags_for_object obj as entry_tags %}
         <p class="pull-right">
@@ -16,4 +21,5 @@
             <span><i class="icon-tag"></i> {% for tag in entry_tags %}<a href="{{ tag.get_absolute_url }}">{{ tag }}</a>{% if not forloop.last %} ,{% endif %}{% endfor %}</span>
         </p>
     </footer>
+    {% endif %}
 </article>

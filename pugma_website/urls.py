@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^redactor/', include('redactor.urls')),
     url(r'^blog/', include('apps.blog.urls')),
     url(r'^', include('apps.page.urls')),
+    url(r'^', include('django.contrib.flatpages.urls')),
 
 )
 
