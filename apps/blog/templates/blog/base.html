@@ -3,5 +3,8 @@
 {% block "content-wrapper" %}
   {% for obj in object_list %}
     {% include "blog/entry_snippet.html" %}
+
+    {% empty %}
+    <div class="alert alert-info">Não há postagens aqui, back again depois!</div>
   {% endfor %}
 {% endblock %}

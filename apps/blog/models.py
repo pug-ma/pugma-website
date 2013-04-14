@@ -23,6 +23,7 @@ class Entry(models.Model):
 	class Meta:
 		verbose_name = _('post')
 		verbose_name_plural = _('posts')
+        ordering = ('-pub_date')
 
 	def __unicode__(self):
 		return unicode(self.title)

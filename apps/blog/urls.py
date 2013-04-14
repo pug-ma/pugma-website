@@ -5,11 +5,15 @@ from django.views.generic import DateDetailView
 from django.views.generic import ListView
 
 from .models import Entry
-
+from .views import TaggedEntryListView
 from .views import EntryDetailView
 
 
 urlpatterns = patterns('',
+    url(r'^tag/(?P<tag>.*)/$', 
+        TaggedEntryListView.as_view(),
+        name='blog_entry_filter_tag'
+    ),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$',
         DayArchiveView.as_view(queryset=Entry.objects.valids(), date_field='pub_date', month_format='%m'),
         name='blog_entry_archive_day'

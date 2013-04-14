@@ -112,10 +112,9 @@
                     <section class="span3">
                         <h4>Últimas publicações</h4>
                         <ul>
-                            <li><h5><a href="#">Mussum ipsum cacilds, vidis litro abertis</a></h5></li>
-                            <li><h5><a href="#">Pra lá , depois divoltis porris, paradis</a></h5></li>
-                            <li><h5><a href="#">Mussum ipsum cacilds, vidis litro abertis</a></h5></li>
-                            <li><h5><a href="#">Pra lá , depois divoltis porris, paradis</a></h5></li>
+                            {% for obj in latest_entries %}
+                                <li><h5><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h5></li>
+                            {% endfor %}
                         </ul>
                     </section>
                     <section class="span7">
