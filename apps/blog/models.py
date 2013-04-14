@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+
+from tagging.fields import TagField
+
 from .managers import EntryManager
 
 
@@ -10,6 +13,7 @@ class Entry(models.Model):
 	body = models.TextField(_('body'))
 	pub_date = models.DateTimeField(_('publication date'))
 	draft = models.BooleanField(_('draft'))
+	tags = TagField()
 
 	objects = EntryManager()
 
@@ -19,4 +23,5 @@ class Entry(models.Model):
 
 	def __unicode__(self):
 		return unicode(self.title)
+
 
