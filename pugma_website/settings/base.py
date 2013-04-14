@@ -18,7 +18,9 @@ TEMPLATE_DEBUG = DEBUG
 
 # Manager
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('hersonls', 'hersonls@gmail.com'),
+    ('raelmax', 'contato@raelmax.com'),
+    ('helton', 'helton99@hotmail.com'),
 )
 MANAGERS = ADMINS
 
@@ -51,10 +53,10 @@ USE_L10N = True
 USE_TZ = True
 
 # Media and Static
-MEDIA_ROOT = ''
-MEDIA_URL = ''
-STATIC_ROOT = ''
-STATIC_URL = '/static/'
+MEDIA_ROOT = path('media')
+MEDIA_URL = '/m/'
+STATIC_ROOT = path('static')
+STATIC_URL = '/s/'
 
 STATICFILES_DIRS = ()
 
@@ -104,9 +106,13 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     # Project Apps
-    'apps.page'
+    'apps.page',
+    'apps.blog',
     
     # Third-party Apps
+    'tagging',
+    'redactor',
+    'south'
 )
 
 # Log
@@ -133,3 +139,7 @@ LOGGING = {
         },
     }
 }
+
+# WYSIWYG Redactor
+REDACTOR_OPTIONS = {'lang': 'pt_br'}
+REDACTOR_UPLOAD = '%scontent-uploads/'.format(MEDIA_URL)

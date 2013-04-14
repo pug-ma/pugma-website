@@ -12,4 +12,3 @@ DATABASES = {
         'NAME': path('database.db'),
     }
 }
-
