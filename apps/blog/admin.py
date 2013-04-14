@@ -9,5 +9,9 @@ class EntryAdmin(admin.ModelAdmin):
 	list_filter = ('pub_date', )
 	form = EntryForm
 
+	def save_model(self, request, obj, form, change):
+		obj.author = request.user
+		obj.save()
+
 
 admin.site.register(Entry, EntryAdmin)

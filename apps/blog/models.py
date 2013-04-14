@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -8,6 +9,7 @@ from .managers import EntryManager
 
 
 class Entry(models.Model):
+	author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_('author'))
 	timestamp = models.DateTimeField(_('timestamp'), auto_now_add=True)
 	title = models.CharField(_('title'), max_length=255)
 	body = models.TextField(_('body'))
