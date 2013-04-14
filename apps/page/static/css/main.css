@@ -1,7 +1,8 @@
 body {
     background: url(../img/bg.png);
 }
-a {
+a,
+a:hover {
     color: #961B1B;
 }
 .navbar-fixed-top {
@@ -27,11 +28,40 @@ a {
     padding: 10px 20px;
     background: #fff;
 }
-.post h2 {
+.post h2,
+.default-box h3 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .post h2 a {
     color: #333;
 }
-.post p {
+.social {
+    list-style: none;
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+.social li {
+    margin-right: 10px;
+    float: left;
+}
+.default-box {
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+}
+.people a {
+    margin: 0 5px 5px 0;
+    float: left;
+}
+.site-footer {
+    background: #1b1b1b;
+    padding: 20px 0;
+}
+.site-footer h4 {
+    color: #fff;
+}
+.site-footer ul {
+    list-style: none;
+    margin: 0;
 }
