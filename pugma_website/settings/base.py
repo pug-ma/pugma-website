@@ -41,6 +41,7 @@ ALLOWED_HOSTS = []
 SITE_ID = 1
 SECRET_KEY = 'v1$+lvszttsiowgzn$6uk!$ux3d^ed@c34#l^0c9kl+6pu=9wz'
 WSGI_APPLICATION = 'pugma_website.wsgi.application'
+SITE_PROTOCOL = 'http://'
 
 # Urls
 ROOT_URLCONF = 'pugma_website.urls'
