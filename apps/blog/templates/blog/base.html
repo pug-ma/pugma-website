@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block "content-wrapper" %}
+  {% for obj in object_list %}
+    {% include "blog/entry_snippet.html" %}
+  {% endfor %}
+{% endblock %}
