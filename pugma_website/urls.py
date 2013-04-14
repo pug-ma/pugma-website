@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^feed/rss/$', LatestEntriesFeed()),
     url(r'^feed/(?P<tag>.*)/rss/$', LatestEntriesByTagFeed()),
     url(r'^', include('apps.page.urls')),
+    url(r'^', include('django.contrib.flatpages.urls')),
 
 )
 

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load flatpages %}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +16,12 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
+                    {% get_flatpages as flatpages %}
                     <ul class="nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        {% for page in flatpages %}
+                        <li><a href="{{ page.url }}">{{ page.title|title }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -103,11 +106,11 @@
                 <div class="row">
                     <section class="span2">
                         <h4>Quem somos</h4>
+                        {% get_flatpages as flatpages %}
                         <ul>
-                            <li><a href="#">Pug-MA</a></li>
-                            <li><a href="#">Pug-MA</a></li>
-                            <li><a href="#">Pug-MA</a></li>
-                            <li><a href="#">Pug-MA</a></li>
+                            {% for page in flatpages %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </section>
                     <section class="span3">
@@ -119,7 +122,6 @@
                         </ul>
                     </section>
                     <section class="span7">
-                        <img src="http://placehold.it/670x150" class="img-polaroid">
                     </section>
                 </div>
             </div>
