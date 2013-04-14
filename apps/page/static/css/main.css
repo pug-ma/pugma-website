@@ -1,0 +1,9 @@
+.navbar-fixed-top {
+    position: static;
+}
+.site-body {
+    margin-top: 20px;
+}
+.new-users-navigation {
+    list-style: none;
+}
