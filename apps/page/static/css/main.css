@@ -1,0 +1,34 @@
+body {
+    background: url(../img/bg.png);
+}
+.navbar-fixed-top {
+    position: static;
+}
+.site-header {
+    padding: 25px 0;
+}
+.site-header .logo {
+    margin: 20px;
+}
+.new-users-navigation {
+    list-style: none;
+}
+.post {
+    -webkit-box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
+    -moz-box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
+    box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background: #fff;
+}
+.post h2 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.post h2 a {
+    color: #333;
+}
+.post p {
+}
