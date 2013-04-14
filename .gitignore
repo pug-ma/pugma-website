@@ -1,0 +1,30 @@
+# System
+.DS_Store
+
+# Tmp databases
+*.db
+
+# Python
+*.py[cod]
+*_dev.py
+
+# Editors
+.codeintel
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
