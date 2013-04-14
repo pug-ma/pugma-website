@@ -66,22 +66,35 @@
                     {% endfor %}
                 </section>
                 <section class="span4">
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Google+</a></li>
+                    <ul class="social clearfix">
+                        <li><a href="#"><img src="{{ STATIC_URL }}img/fb.png"></a></li>
+                        <li><a href="#"><img src="{{ STATIC_URL }}img/tw.png"></a></li>
+                        <li><a href="#"><img src="{{ STATIC_URL }}img/fd.png"></a></li>
                     </ul>
-                    <section>
+                    <section class="default-box">
                         <h3>Próximo encontro</h3>
                         <p><b>Local: </b>INESPO</p>
                         <p><b>Data/Hora: </b>11/05/2013 às 14:00</p>
                     </section>
-                    <section>
+                    <section class="default-box">
                         <h3>Projetos</h3>
+                        <ul class="media-list">
+                            {% for i in "123" %}
+                            <li class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Media heading</h4>
+                                    <p><a href="#">Lole hehehe adgasudhgasud, nice project!</a></p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </section>
-                    <section>
-                        <h3>Associados</h3>
-                        <div>
+                    <section class="default-box">
+                        <h3>Membros</h3>
+                        <div class="people">
                             <a href="#"><img src="http://placehold.it/50x50"></a>
                             <a href="#"><img src="http://placehold.it/50x50"></a>
                             <a href="#"><img src="http://placehold.it/50x50"></a>
