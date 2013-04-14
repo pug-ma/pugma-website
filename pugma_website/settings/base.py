@@ -81,6 +81,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
     'apps.page.context_processors.projects',
+    'apps.page.context_processors.next_event',
 )
 
 # Middleware 

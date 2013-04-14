@@ -56,11 +56,12 @@
                         <li><a href="#"><img src="{{ STATIC_URL }}img/tw.png"></a></li>
                         <li><a href="#"><img src="{{ STATIC_URL }}img/fd.png"></a></li>
                     </ul>
+                    {% if next_event %}
                     <section class="default-box">
                         <h3>Próximo encontro</h3>
-                        <p><b>Local: </b>INESPO</p>
-                        <p><b>Data/Hora: </b>11/05/2013 às 14:00</p>
+                        {{ next_event.body|safe }}
                     </section>
+                    {% endif %}
                     {% if projects %}
                     <section class="default-box">
                         <h3>Projetos</h3>
