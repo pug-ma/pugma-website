@@ -118,6 +118,7 @@ INSTALLED_APPS = (
     'apps.projects',
     
     # Third-party Apps
+    'gunicorn',
     'tagging',
     'redactor',
     'south'
